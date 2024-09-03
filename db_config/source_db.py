@@ -1,9 +1,7 @@
-from dotenv import dotenv_values
-from db_config.log_db import logging
 from db_config.db_class import DatabaseConnectionPool
 
-env_config = dotenv_values(".env")
-
+from variable_ import env_config
+logging = print
 db_config = {
   'dbname': env_config['MAIN_DB_NAME'],
   'user': env_config['MAIN_DB_USER'],
